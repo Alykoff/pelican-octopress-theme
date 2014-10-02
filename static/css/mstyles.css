@@ -1,0 +1,23 @@
+.site_title:hover {
+  text-shadow: 0 0 40px #f000ff;
+}
+
+::selection {
+	background: #994494;
+	color: white;
+	text-shadow: none;
+}
+
+::-moz-selection {
+	background: #994494;
+	color: white;
+	text-shadow: none;
+}
+
+a:hover {
+  color: rgb(14, 80, 139);
+}
+
+#content .blog-index article h1 a:hover {
+  color: rgb(14, 80, 139) !important;  
+}
