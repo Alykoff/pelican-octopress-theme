@@ -4,8 +4,9 @@
 	  <img src="{{ SITEURL }}/{{ SIDEBAR_IMAGE }}" alt="{{ SIDEBAR_IMAGE_ALT}}" width="{{SIDEBAR_IMAGE_WIDTH}}"/> 
   </section>
   {% endif %}
+  
   <section>
-    <h1>Recent Posts</h1>
+    <h2>Recent Posts</h2>
     <ul id="recent_posts">
       {% for article in articles[:5] %}
       <li class="post">
@@ -14,11 +15,11 @@
       {% endfor %}
     </ul>
   </section>
+
   {% if categories %}
   <section>
-      
-    <h1>Categories</h1>
-    <ul id="recent_posts">
+    <h2>Categories</h2>
+    <ul id="recent_categories">
       {% for category, articles in categories %}
         <li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></li>
       {% endfor %}
@@ -27,7 +28,7 @@
   {% endif %} 
 
   <section>
-  <h1>Tags</h1>
+  <h2>Tags</h2>
   {% for tag, article in tags %}
     <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% if not loop.last %},{% endif %}
   {% endfor %}
