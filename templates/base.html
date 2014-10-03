@@ -55,6 +55,19 @@
   {% if page and page.latex %}
     {{ page.latex }}
   {% endif %}
+  
+  {% if article and article.js %}
+    {% for j_url in article.js.split(',') %}
+      <script src="{{ j_url }}"></script>
+    {% endfor %}
+  {% endif %}
+
+  {% if article and article.rawcss %}
+    <style type="text/css">
+      {{ article.rawcss }}
+    </style>
+  {% endif %}
+
 
 </head>
 
